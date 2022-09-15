@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import MenuCard from "./MenuCard";
 import { AnimateSharedLayout } from "framer-motion";
@@ -8,22 +9,91 @@ import { AnimateSharedLayout } from "framer-motion";
 // look more into fonts
 
 function App() {
+  const [openId, setOpenId] = useState(-1);
+
+  const updateOpenId = (updatedId) => {
+    setOpenId(updatedId);
+  };
+
   return (
-    <div className="menu">
+    <div
+      className="menu"
+      // style={{ backgroundColor: openId === -1 ? "white" : "black" }}
+    >
       <div className="apps">
         <AnimateSharedLayout>
-          <MenuCard value="test0" id={0} />
-          <MenuCard value="test1" id={1} />
-          <MenuCard value="test2" id={2} />
-          <MenuCard value="test3" id={3} />
-          <MenuCard value="test4" id={4} />
-          <MenuCard value="test5" id={5} />
-          <MenuCard value="test6" id={6} />
-          <MenuCard value="test7" id={7} />
-          <MenuCard value="test8" id={8} />
-          <MenuCard value="test9" id={9} />
-          <MenuCard value="test10" id={10} />
-          <MenuCard value="test11" id={11} />
+          <MenuCard
+            value="test0"
+            id={0}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test1"
+            id={1}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test2"
+            id={2}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test3"
+            id={3}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test4"
+            id={4}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test5"
+            id={5}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test6"
+            id={6}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test7"
+            id={7}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test8"
+            id={8}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test9"
+            id={9}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test10"
+            id={10}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
+          <MenuCard
+            value="test11"
+            id={11}
+            openId={openId}
+            updateOpenId={updateOpenId}
+          />
         </AnimateSharedLayout>
       </div>
 
@@ -144,10 +214,8 @@ function App() {
   );
 }
 
-{
-  /* https://abhik-b.medium.com/cards-full-screen-expand-and-close-react-and-framer-motion-af0f5cf83f45 */
-}
-{
-  /* https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container */
-}
+/* https://abhik-b.medium.com/cards-full-screen-expand-and-close-react-and-framer-motion-af0f5cf83f45 */
+
+/* https://stackoverflow.com/questions/19484707/how-can-i-make-an-svg-scale-with-its-parent-container */
+
 export default App;
