@@ -1,0 +1,118 @@
+/* normal card css*/
+/* .normal-card{
+  height: 20vh;
+  display: grid;
+  place-items: end center;
+  margin: 10px;
+  border-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 25px;
+  background-color: gainsboro;
+  flex: 1 0 20%;
+  border-color: #C1C0C1;
+  border-width: 4px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+} */
+/* width: 20vw;
+width: 200px
+  height: 200px; */
+  /* filter: url('#round'); */
+
+
+/* normal card css*/
+.normal-card{
+  height: 20vh;
+  display: grid;
+  place-items: end center;
+  margin: 10px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  background-color: gainsboro;
+  flex: 1 0 20%;
+  margin: 15px;
+  position: relative;
+  border-radius: 90% / 10%;
+  text-align: center;
+  text-indent: .1em;
+  border-color: #C1C0C1;
+  border-width: 3px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  z-index: 1;
+  transition: box-shadow 0.25s ease-out, border-color 0.25s ease-out; 
+}
+
+.normal-card:hover {
+  border-color: #34BEED;
+  box-shadow: 0 1px 10px #34BEED, 0 -1px 10px #34BEED, 5px 0 10px #34BEED, -5px 0 10px #34BEED;
+}
+
+/* https://css-tricks.com/the-shapes-of-css/#tv-screen-shape */
+.normal-card::before {
+  content: '';
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  right: -3%;
+  left: -3%;
+  background: inherit;
+  z-index: -1;
+  border-radius: 3% / 50%;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-color: #C1C0C1;
+  border-width: 4px;
+}
+
+.normal-card:hover::before {
+  border-color: #34BEED;
+  /* top: 5%;
+  bottom: 4%;
+  right: -5%;
+  left: -5%; */
+}
+  
+.normal-card h1{
+  font-size: 18px;
+  color:var(--fg);
+  padding: 5px;
+  text-align: center;
+}
+
+/* expand card css*/
+.expanded-card{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100vw;
+  height:100vh;
+  /* z-index: 1; */
+  display: grid;
+  place-items: center;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: gainsboro;
+  border-color: #C1C0C1;
+}
+  
+.expanded-card-h{
+  font-size: 27px;
+  color:var(--fg);
+  width: 300px;
+  padding: 5px;
+  place-self: end center;
+}
+  
+.expanded-card p{
+  width:300px;
+  padding: 5px;
+  place-self:  start center;
+}
+
+/* viewBox="0 0 1440 320" */
+
+/* viewBox="0 0 20 10" */
+
+/* M 250 100 Q 100 100 150 100 Q 150 100 200 150 Q 250 200 350 200 C 450 200 450 200 650 200 C 750 200 800 150 850 100 L 800 100 L 750 100 L 700 100 L 500 100 L 400 100 L 250 100  */
+
+/* M 0 100 Q 100 100 150 100 Q 150 100 200 150 Q 250 200 350 200 C 450 200 450 200 650 200 C 750 200 800 150 850 100 L 1000 100 L 1000 350 L 700 350 L 400 350 L 0 350 L 0 100  */
