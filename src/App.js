@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import MenuCard from "./MenuCard";
 import { AnimateSharedLayout } from "framer-motion";
+import { BsGithub } from "react-icons/bs";
 
 // look into disabling click during animation
 //// by moving the onclick to a close button in the expanded content
@@ -9,6 +10,7 @@ import { AnimateSharedLayout } from "framer-motion";
 // look more into fonts
 // add 404 page
 // look into hover/click minor issue
+// maybe just use icons to fill apps on smaller screens/mobile
 
 // potential app slots
 // About me
@@ -175,24 +177,28 @@ function App() {
           position: "fixed",
           backgroundColor: "gainsboro",
         }}
-      ></div>
-
-      {/* <div
-        style={{
-          width: "50%",
-          margin: "auto",
-          height: "18vh",
-          // top: 0,
-          // position: "fixed",
-          backgroundColor: "green",
-          textAlign: "center",
-          // paddingTop: "1%",
-          fontSize: "3vw",
-          color: "gainsboro",
-        }}
       >
-        Sean McGovern
-      </div> */}
+        <a
+          href="https://github.com/seanrmcgovern"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            borderStyle: "solid",
+            borderColor: "#34BEED",
+            borderWidth: "5px",
+            borderRadius: "50%",
+            height: "110px",
+            width: "110px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: "5%",
+          }}
+        >
+          <BsGithub className="github" />
+        </a>
+      </div>
+
       <div
         style={{
           width: "50%",
@@ -208,30 +214,6 @@ function App() {
       >
         Sean McGovern
       </div>
-
-      {/* svg bottom bar solution */}
-      {/* <div
-        style={{
-          backgroundColor: "gainsboro",
-          resize: "horizontal",
-          overflow: "hidden",
-          width: "100%",
-          height: "auto",
-          textAlign: "center",
-        }}
-      >
-        <svg
-          width="100%"
-          viewBox="-250 128 1500 600"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <path
-            fill="#ffffff"
-            fillOpacity={1}
-            d="M 250 100 Q 100 100 150 100 Q 150 100 200 150 Q 250 200 350 200 C 450 200 450 200 650 200 C 750 200 800 150 850 100 L 800 100 L 750 100 L 700 100 L 500 100 L 400 100 L 250 100 "
-          ></path>
-        </svg>
-      </div> */}
     </div>
   );
 }

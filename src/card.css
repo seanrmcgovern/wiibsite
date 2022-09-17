@@ -1,26 +1,4 @@
 /* normal card css*/
-/* .normal-card{
-  height: 20vh;
-  display: grid;
-  place-items: end center;
-  margin: 10px;
-  border-style: solid;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-radius: 25px;
-  background-color: gainsboro;
-  flex: 1 0 20%;
-  border-color: #C1C0C1;
-  border-width: 4px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-} */
-/* width: 20vw;
-width: 200px
-  height: 200px; */
-  /* filter: url('#round'); */
-
-
-/* normal card css*/
 .normal-card{
   height: 20vh;
   display: grid;
