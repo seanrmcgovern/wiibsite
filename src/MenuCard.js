@@ -6,11 +6,7 @@ function MenuCard({ value, id, openId, updateOpenId }) {
   return (
     <Fragment>
       {openId === id && (
-        <motion.div
-          className="void"
-          layoutId={`void-${id}`}
-          transition={{ ease: "easeOut", duration: 3 }}
-        ></motion.div>
+        <motion.div className="void" layoutId={`void-${id}`}></motion.div>
       )}
       {openId === id && (
         <motion.div
@@ -20,6 +16,7 @@ function MenuCard({ value, id, openId, updateOpenId }) {
           style={{ zIndex: 2 }}
           transition={{ ease: "easeOut", duration: 0.75 }}
         >
+          {/* have content that only displays when open */}
           {/* <motion.h2
             className="expanded-card-h"
             layoutId={`expandable-card-h-${id}`}
@@ -48,6 +45,7 @@ function MenuCard({ value, id, openId, updateOpenId }) {
         >
           {value}
         </motion.h1> */}
+        {/* have header component/content that shows in open and closed mode */}
         <h1 style={{}}>{value}</h1>
       </motion.div>
 

@@ -3,10 +3,32 @@ import "./App.css";
 import MenuCard from "./MenuCard";
 import { AnimateSharedLayout } from "framer-motion";
 
-// look into slowing down animation, and making cards maintain position/hide them during animation
-// make background black when card expandedx
+// look into disabling click during animation
+//// by moving the onclick to a close button in the expanded content
 // maybe rotate cursor for pointer
 // look more into fonts
+// add 404 page
+// look into hover/click minor issue
+
+// potential app slots
+// About me
+// What is this website? About this site (explaining the wii aspect of this website/portfolio)..or maybe just make a button on the bottom bar for this
+// Resume timeline
+// Technical Portfolio Section: Make one app or multiple?
+//// Pokedex article/writeup, explaining passion for the games and the project
+//// Pinball tracker article/writeup
+// Photo Channel
+// Books channel, list of books I've read with dates completed and reviews/ratings, blog style + timeline style
+//// TV/Movie/Games channel in similar style ^^^
+// Running Log Channel !! https://developers.strava.com/docs/reference/#api-Activities-getActivityById
+// Animation Channel
+// Pixel art channel
+// Link to more traditional website
+// At least one of these apps has to be an actual game right??
+
+// Contact modal should be linked to mail button on bottom bar
+// linkedin button/link could be the SD card in the bottom left
+// Github could be the Wii circle button in the bottom left
 
 function App() {
   const [openId, setOpenId] = useState(-1);
