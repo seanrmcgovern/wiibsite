@@ -3,6 +3,7 @@ import "./App.css";
 import MenuCard from "./MenuCard";
 import { AnimateSharedLayout } from "framer-motion";
 import { BsGithub } from "react-icons/bs";
+import { HiMail } from "react-icons/hi";
 
 // look into disabling click during animation
 //// by moving the onclick to a close button in the expanded content
@@ -177,25 +178,32 @@ function App() {
           position: "fixed",
           backgroundColor: "gainsboro",
         }}
+      ></div>
+
+      {/* GitHub+Contact Button/Link */}
+      <div
+        style={{
+          width: "100%",
+          height: "18vh",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
       >
         <a
           href="https://github.com/seanrmcgovern"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            borderStyle: "solid",
-            borderColor: "#34BEED",
-            borderWidth: "5px",
-            borderRadius: "50%",
-            height: "110px",
-            width: "110px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginLeft: "5%",
-          }}
+          className="menuButton"
         >
-          <BsGithub className="github" />
+          <BsGithub className="menuIcon" />
+        </a>
+        <a
+          href="https://github.com/seanrmcgovern"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="menuButton"
+        >
+          <HiMail className="menuIcon" />
         </a>
       </div>
 
