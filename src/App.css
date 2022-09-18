@@ -12,7 +12,8 @@
   height: 100vh;
   overflow: hidden;
   cursor: url(cursor.png), auto;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Hammersmith One', sans-serif;
   font-weight: 500;
   /* font-weight: medium; */
 }

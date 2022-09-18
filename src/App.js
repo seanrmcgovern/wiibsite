@@ -9,8 +9,8 @@ import { HiMail } from "react-icons/hi";
 //// by moving the onclick to a close button in the expanded content
 // maybe rotate cursor for pointer
 // look more into fonts
-// add 404 page
-// look into hover/click minor issue
+// customize 404 page
+// add slight/faded stripe pattern in the background
 // maybe just use icons to fill apps on smaller screens/mobile
 
 // potential app slots
@@ -184,7 +184,8 @@ function App() {
       <div
         style={{
           width: "100%",
-          height: "18vh",
+          marginTop: "1%",
+          // height: "18vh",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -214,7 +215,6 @@ function App() {
           bottom: 0,
           left: "25%",
           position: "fixed",
-          // backgroundColor: "green",
           textAlign: "center",
           fontSize: "3vw",
           color: "#949495",
