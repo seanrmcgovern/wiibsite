@@ -1,37 +1,32 @@
 import React, { useState } from "react";
 import "./App.css";
 import MenuCard from "./MenuCard";
+import ResumeTimeline from "./ResumeTimeline";
 import { AnimateSharedLayout } from "framer-motion";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 
-// look into disabling click during animation
-//// by moving the onclick to a close button in the expanded content
+// Add center date
+// Don't grow up, it's a trap
+// move app close button under card, away from content
+//// move the onclick to close button
 // maybe rotate cursor for pointer
 // look more into fonts
 // customize 404 page
 // add slight/faded stripe pattern in the background
-// maybe just use icons to fill apps on smaller screens/mobile
+// maybe just use icons to fill apps on smaller screens/mobile, and make bottom bar smaller with just the name
 
-// potential app slots
-// About me
 // What is this website? About this site (explaining the wii aspect of this website/portfolio)..or maybe just make a button on the bottom bar for this
-// Resume timeline
 // Technical Portfolio Section: Make one app or multiple?
 //// Pokedex article/writeup, explaining passion for the games and the project
 //// Pinball tracker article/writeup
-// Photo Channel
-// Books channel, list of books I've read with dates completed and reviews/ratings, blog style + timeline style
-//// TV/Movie/Games channel in similar style ^^^
-// Running Log Channel !! https://developers.strava.com/docs/reference/#api-Activities-getActivityById
+// Books Channel, list of books I've read with dates completed and reviews/ratings, blog style + timeline style
+// Running Log: https://developers.strava.com/docs/reference/#api-Activities-getActivityById
 // Animation Channel
-// Pixel art channel
-// Link to more traditional website
-// At least one of these apps has to be an actual game right??
+// Certifications
 
 // Contact modal should be linked to mail button on bottom bar
 // linkedin button/link could be the SD card in the bottom left
-// Github could be the Wii circle button in the bottom left
 
 function App() {
   const [openId, setOpenId] = useState(-1);
@@ -41,83 +36,116 @@ function App() {
   };
 
   return (
-    <div
-      className="menu"
-      // style={{ backgroundColor: openId === -1 ? "white" : "black" }}
-    >
+    <div className="menu">
       <div className="apps">
         <AnimateSharedLayout>
           <MenuCard
-            value="test0"
+            value="About this Website"
             id={0}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/website-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/s/photos/html-code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test1"
+            value="Me Channel"
             id={1}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/me-min.jpg"}
+            // credit to my dad
           />
           <MenuCard
-            value="test2"
+            value="Work Experience"
             id={2}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<ResumeTimeline />}
+            bgImage={"/work2-min.jpg"}
+            // Photo by <a href="https://unsplash.com/es/@mikeyharris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikey Harris</a> on <a href="https://unsplash.com/s/photos/work-from-home?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test3"
+            value="Traditional Website"
             id={3}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/web1-min.jpg"}
+            // https://unsplash.com/photos/_t-l5FFH8VA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
           />
           <MenuCard
-            value="test4"
+            value="Pokedex Mobile Application"
             id={4}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/pokeball-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@shugo88?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Don H</a> on <a href="https://unsplash.com/s/photos/pokemon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test5"
+            value="Pinball Machine Finder Web App"
             id={5}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/pinball-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@hjmckean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Heather McKean</a> on <a href="https://unsplash.com/s/photos/pinball?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test6"
+            value="Study Buddy Web App"
             id={6}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/study1-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joanna Kosinska</a> on <a href="https://unsplash.com/s/photos/study-website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test7"
+            value="Certifications"
             id={7}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/work1-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@freegraphictoday?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">AbsolutVision</a> on <a href="https://unsplash.com/s/photos/experience?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test8"
+            value="Running Log"
             id={8}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/run1-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@we_are_rising?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/@we_are_rising?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test9"
+            value="Books Channel"
             id={9}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/books-min.jpg"}
+            // Photo by <a href="https://unsplash.com/ja/@iuliavrinceanu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vrînceanu Iulia</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test10"
+            value="Animations"
             id={10}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/donut-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@ayushxb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ayush Bharshankar</a> on <a href="https://unsplash.com/s/photos/animation-blender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="test11"
+            value="Photo Channel"
             id={11}
             openId={openId}
             updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            bgImage={"/camera1-min.jpg"}
+            // Photo by <a href="https://unsplash.com/@jannisjansson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jannis Edelmann</a> on <a href="https://unsplash.com/s/photos/camera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
         </AnimateSharedLayout>
       </div>
@@ -180,7 +208,7 @@ function App() {
         }}
       ></div>
 
-      {/* GitHub+Contact Button/Link */}
+      {/* GitHub+LinkedIn+Contact Button/Link */}
       <div
         style={{
           width: "100%",
@@ -190,22 +218,40 @@ function App() {
           justifyContent: "space-between",
         }}
       >
-        <a
-          href="https://github.com/seanrmcgovern"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="menuButton"
+        <div
+          style={{
+            marginLeft: "2%",
+            display: "flex",
+            alignItems: "flex-start",
+          }}
         >
-          <BsGithub className="menuIcon" />
-        </a>
-        <a
-          href="https://github.com/seanrmcgovern"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="menuButton"
-        >
-          <HiMail className="menuIcon" />
-        </a>
+          <a
+            href="https://github.com/seanrmcgovern"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="menuButton"
+          >
+            <BsGithub className="menuIcon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/seanrmcgovern/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sdcard"
+          >
+            <BsLinkedin className="linkedinIcon" />
+          </a>
+        </div>
+        <div style={{ marginRight: "2%" }}>
+          <a
+            href="mailto:srm5ka@virginia.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="menuButton"
+          >
+            <HiMail className="menuIcon" />
+          </a>
+        </div>
       </div>
 
       <div

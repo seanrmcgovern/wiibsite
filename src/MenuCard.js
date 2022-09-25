@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import React, { Fragment } from "react";
 import "./card.css";
+import "./App.css";
+import { IoClose } from "react-icons/io5";
 
-function MenuCard({ value, id, openId, updateOpenId }) {
+function MenuCard({ value, id, openId, updateOpenId, content, bgImage }) {
   return (
     <Fragment>
       {openId === id && (
@@ -14,7 +16,7 @@ function MenuCard({ value, id, openId, updateOpenId }) {
           className="expanded-card"
           layoutId={`expandable-card-${id}`}
           style={{ zIndex: 2 }}
-          transition={{ ease: "easeOut", duration: 0.75 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
         >
           {/* have content that only displays when open */}
           {/* <motion.h2
@@ -30,24 +32,62 @@ function MenuCard({ value, id, openId, updateOpenId }) {
             distinctio fuga iure, ad odit repudiandae modi est alias ipsum
             aperiam. Culpa?
           </p> */}
+          <motion.div
+          // className="expanded-card-h"
+          // layoutId={`expandable-card-${id}`}
+          >
+            <div
+              style={{
+                width: "80vw",
+              }}
+            >
+              {content}
+              <div>
+                <button
+                  style={{
+                    position: "fixed",
+                    bottom: "7vh",
+                    right: "7vw",
+                    borderRadius: "50%",
+                    width: "50px",
+                    height: "50px",
+                    textAlign: "center",
+                  }}
+                >
+                  <IoClose className="menuIcon" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       )}
       <motion.div
         onClick={() => updateOpenId(id)}
         className="normal-card"
         layoutId={`expandable-card-${id}`}
-        style={{ background: value }}
+        style={{
+          backgroundImage: `linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ), url(${bgImage})`,
+        }}
         transition={{ ease: "easeOut", duration: 0.5 }}
       >
-        {/* <motion.h1
-          transition={{ ease: "easeIn", delay: 1 }}
-          layoutId={`expandable-card-h-${id}`}
-        >
-          {value}
-        </motion.h1> */}
-        {/* have header component/content that shows in open and closed mode */}
-        <h1 style={{}}>{value}</h1>
+        {/* <img
+          src={bgImage}
+          style={{ objectFit: "cover", height: "20vh" }}
+          alt={"Title"}
+        ></img> */}
+        <h1 style={{ margin: "auto", fontSize: "1.5rem" }}>{value}</h1>
       </motion.div>
+      {/* <motion.img
+        src={bgImage}
+        onClick={() => updateOpenId(id)}
+        className="normal-card"
+        layoutId={`expandable-card-${id}`}
+        style={{ objectFit: "cover" }}
+        alt={"Title"}
+      ></motion.img> */}
 
       <motion.div
         className="empty"
