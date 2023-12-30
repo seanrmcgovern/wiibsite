@@ -67,7 +67,7 @@ function App() {
             // Photo by <a href="https://unsplash.com/es/@mikeyharris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikey Harris</a> on <a href="https://unsplash.com/s/photos/work-from-home?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="Traditional Website"
+            value="Main Website"
             id={3}
             openId={openId}
             updateOpenId={updateOpenId}
@@ -76,7 +76,7 @@ function App() {
             // https://unsplash.com/photos/_t-l5FFH8VA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
           />
           <MenuCard
-            value="Pokedex Mobile Application"
+            value="Pokedex"
             id={4}
             openId={openId}
             updateOpenId={updateOpenId}
@@ -85,7 +85,7 @@ function App() {
             // Photo by <a href="https://unsplash.com/@shugo88?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Don H</a> on <a href="https://unsplash.com/s/photos/pokemon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="Pinball Machine Finder Web App"
+            value="Pinball Machine Finder"
             id={5}
             openId={openId}
             updateOpenId={updateOpenId}
@@ -94,17 +94,8 @@ function App() {
             // Photo by <a href="https://unsplash.com/@hjmckean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Heather McKean</a> on <a href="https://unsplash.com/s/photos/pinball?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="Study Buddy Web App"
-            id={6}
-            openId={openId}
-            updateOpenId={updateOpenId}
-            content={<div>hello</div>}
-            bgImage={"/study1-min.jpg"}
-            // Photo by <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joanna Kosinska</a> on <a href="https://unsplash.com/s/photos/study-website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-          />
-          <MenuCard
             value="Certifications"
-            id={7}
+            id={6}
             openId={openId}
             updateOpenId={updateOpenId}
             content={<div>hello</div>}
@@ -113,7 +104,7 @@ function App() {
           />
           <MenuCard
             value="Running Log"
-            id={8}
+            id={7}
             openId={openId}
             updateOpenId={updateOpenId}
             content={<div>hello</div>}
@@ -121,30 +112,34 @@ function App() {
             // Photo by <a href="https://unsplash.com/@we_are_rising?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/@we_are_rising?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="Books Channel"
+            id={8}
+            openId={openId}
+            updateOpenId={updateOpenId}
+            content={<div>hello</div>}
+            isComingSoonBlock={true}
+            // Photo by <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joanna Kosinska</a> on <a href="https://unsplash.com/s/photos/study-website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          />
+          <MenuCard
             id={9}
             openId={openId}
             updateOpenId={updateOpenId}
             content={<div>hello</div>}
-            bgImage={"/books-min.jpg"}
+            isComingSoonBlock={true}
             // Photo by <a href="https://unsplash.com/ja/@iuliavrinceanu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vrînceanu Iulia</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
-            value="Animations"
             id={10}
             openId={openId}
             updateOpenId={updateOpenId}
             content={<div>hello</div>}
-            bgImage={"/donut-min.jpg"}
-            // Photo by <a href="https://unsplash.com/@ayushxb?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ayush Bharshankar</a> on <a href="https://unsplash.com/s/photos/animation-blender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            isComingSoonBlock={true}
           />
           <MenuCard
-            value="Photo Channel"
             id={11}
             openId={openId}
             updateOpenId={updateOpenId}
             content={<div>hello</div>}
-            bgImage={"/camera1-min.jpg"}
+            isComingSoonBlock={true}
             // Photo by <a href="https://unsplash.com/@jannisjansson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jannis Edelmann</a> on <a href="https://unsplash.com/s/photos/camera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
         </AnimateSharedLayout>
@@ -213,7 +208,6 @@ function App() {
         style={{
           width: "100%",
           marginTop: "1%",
-          // height: "18vh",
           display: "flex",
           justifyContent: "space-between",
         }}

@@ -4,7 +4,16 @@ import "./card.css";
 import "./App.css";
 import { IoClose } from "react-icons/io5";
 
-function MenuCard({ value, id, openId, updateOpenId, content, bgImage }) {
+function MenuCard({
+  value,
+  id,
+  openId,
+  updateOpenId,
+  content,
+  bgImage,
+  isComingSoonBlock,
+}) {
+  const additionalBackgroundClass = isComingSoonBlock ? " tv-card" : "";
   return (
     <Fragment>
       {openId === id && (
@@ -63,14 +72,18 @@ function MenuCard({ value, id, openId, updateOpenId, content, bgImage }) {
       )}
       <motion.div
         onClick={() => updateOpenId(id)}
-        className="normal-card"
+        className={"normal-card" + additionalBackgroundClass}
         layoutId={`expandable-card-${id}`}
-        style={{
-          backgroundImage: `linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ), url(${bgImage})`,
-        }}
+        style={
+          !isComingSoonBlock
+            ? {
+                backgroundImage: `linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(${bgImage})`,
+              }
+            : {}
+        }
         transition={{ ease: "easeOut", duration: 0.5 }}
       >
         {/* <img
@@ -78,7 +91,14 @@ function MenuCard({ value, id, openId, updateOpenId, content, bgImage }) {
           style={{ objectFit: "cover", height: "20vh" }}
           alt={"Title"}
         ></img> */}
-        <h1 style={{ margin: "auto", fontSize: "1.5rem" }}>{value}</h1>
+        <h1
+          style={{
+            margin: "auto",
+            fontSize: isComingSoonBlock ? "2rem" : "1.5rem",
+          }}
+        >
+          {isComingSoonBlock ? "Coming Soon" : value}
+        </h1>
       </motion.div>
       {/* <motion.img
         src={bgImage}

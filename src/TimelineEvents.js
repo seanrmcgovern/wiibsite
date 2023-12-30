@@ -13,7 +13,7 @@ export const TimelineEvents = [
     location: "Crutchfield Corporation",
     date: "Oct. 2021 - present",
     description: "C#, SQL Server, TypeScript development",
-    skills: ".NET API | ASP.NET Web applications | VueJS",
+    skills: ".NET API, ASP.NET Web applications, VueJS",
     icon: <FaLaptopCode />,
   },
   {
@@ -21,7 +21,7 @@ export const TimelineEvents = [
     location: "Investure LLC",
     date: "Sept. 2019 - May 2021",
     description: "C#, JavaScript development",
-    skills: ".NET API | ReactJS",
+    skills: ".NET API, ReactJS",
     icon: <SiCsharp />,
   },
   {
