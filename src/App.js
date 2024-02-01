@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import MenuCard from "./MenuCard";
+import AboutSite from "./AboutSite";
 import ResumeTimeline from "./ResumeTimeline";
 import { AnimateSharedLayout } from "framer-motion";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -44,9 +45,8 @@ function App() {
             id={0}
             openId={openId}
             updateOpenId={updateOpenId}
-            content={<div>hello</div>}
+            content={<AboutSite />}
             bgImage={"/website-min.jpg"}
-            // Photo by <a href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/s/photos/html-code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           />
           <MenuCard
             value="Me Channel"

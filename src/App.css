@@ -7,6 +7,14 @@
   padding-right: 5%;
 }
 
+button {
+  cursor: url(cursor.png), auto;
+}
+
+button:hover {
+  border-color: #34BEED;
+}
+
 .menu {
   /* background-color: white; */
   /* background-color: #E8E8E8; */

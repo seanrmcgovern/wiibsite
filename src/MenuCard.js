@@ -21,7 +21,7 @@ function MenuCard({
       )}
       {openId === id && (
         <motion.div
-          onClick={() => updateOpenId(-1)}
+          // onClick={() => updateOpenId(-1)}
           className="expanded-card"
           layoutId={`expandable-card-${id}`}
           style={{ zIndex: 2 }}
@@ -55,13 +55,14 @@ function MenuCard({
                 <button
                   style={{
                     position: "fixed",
-                    bottom: "7vh",
+                    top: "7vh",
                     right: "7vw",
                     borderRadius: "50%",
                     width: "50px",
                     height: "50px",
                     textAlign: "center",
                   }}
+                  onClick={() => updateOpenId(-1)}
                 >
                   <IoClose className="menuIcon" />
                 </button>
